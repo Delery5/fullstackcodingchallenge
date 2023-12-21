@@ -97,4 +97,4 @@ spec:
     - protocol: TCP
       port: 3306
       targetPort: 3306
-  type: Loadbalancer  # Change to NodePort if needed
+  type: LoadBalancer  # Change to NodePort if needed
