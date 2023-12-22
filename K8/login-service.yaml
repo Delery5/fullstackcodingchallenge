@@ -1,3 +1,6 @@
+# loginservice-and-mysqldblogin.yaml
+
+---
 # Deployment for loginservice
 apiVersion: apps/v1
 kind: Deployment
@@ -35,8 +38,8 @@ spec:
               value: "true"
             - name: spring.jpa.properties.hibernate.dialect
               value: org.hibernate.dialect.MySQLDialect
----
 
+---
 # Service for loginservice
 apiVersion: v1
 kind: Service
@@ -49,10 +52,9 @@ spec:
     - protocol: TCP
       port: 8083
       targetPort: 8083
-  type: LoadBalancer  # Change to LoadBalancer if using a cloud provider
+  type: ClusterIP  # Change to ClusterIP
 
 ---
-
 # Deployment for mysqldblogin
 apiVersion: apps/v1
 kind: Deployment
@@ -86,7 +88,6 @@ spec:
       # Add volume mounts, resources, etc. if needed
 
 ---
-
 # Service for mysqldblogin
 apiVersion: v1
 kind: Service
@@ -99,4 +100,4 @@ spec:
     - protocol: TCP
       port: 3306  # Use the same port as MySQL container
       targetPort: 3306
-  type: LoadBalancer  # Change to LoadBalancer if using a cloud provider
+  type: ClusterIP  # Change to ClusterIP

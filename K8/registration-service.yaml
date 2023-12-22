@@ -1,4 +1,7 @@
-# registration-service-deployment.yaml
+# registration-service-and-mysqldbregistration.yaml
+
+---
+# Deployment for registration-service
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -37,7 +40,7 @@ spec:
               value: org.hibernate.dialect.MySQLDialect
 
 ---
-
+# Service for registration-service
 apiVersion: v1
 kind: Service
 metadata:
@@ -49,11 +52,10 @@ spec:
     - protocol: TCP
       port: 8082
       targetPort: 8082
-  type: LoadBalancer  # Change to NodePort if needed
+  type: ClusterIP  # Change to ClusterIP
 
 ---
-
-# mysqldbregistration
+# Deployment for mysqldbregistration
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -85,7 +87,7 @@ spec:
       restartPolicy: Always
 
 ---
-
+# Service for mysqldbregistration
 apiVersion: v1
 kind: Service
 metadata:
@@ -97,4 +99,4 @@ spec:
     - protocol: TCP
       port: 3306
       targetPort: 3306
-  type: LoadBalancer  # Change to NodePort if needed
+  type: ClusterIP  # Change to ClusterIP
