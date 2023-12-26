@@ -23,7 +23,7 @@ spec:
             - name: EMPLOYEE_SERVICE_URI
               value: http://EMPLOYEE-SERVICE
             - name: LOGIN_SERVICE_URI
-              value: http://LOGIN-SERVICE:8083
+              value: http://login-service:8083
             - name: REGISTRATION_SERVICE_URI
               value: http://REGISTRATION-SERVICE
 ---
