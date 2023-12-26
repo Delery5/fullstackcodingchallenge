@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: delery/api-gateway:s4
+          image: delery1/my-coding-challenge-api-gateway-service:s4
           ports:
             - containerPort: 8085
           env:

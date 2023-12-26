@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: registration-service
-          image: delery/registrationservice:s4
+          image: delery1/my-coding-challenge-registration-service:s4
           ports:
             - containerPort: 8082
           env:
