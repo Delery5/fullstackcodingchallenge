@@ -23,7 +23,7 @@ spec:
             - containerPort: 8082
           env:
             - name: eureka.client.service-url.defaultZone
-              value: http://discovery-service:8761/eureka
+              value: http://discovery-service:8761/eureka/
             - name: eureka.client.register-with-eureka
               value: "true"
             - name: eureka.client.prefer-ip-address
