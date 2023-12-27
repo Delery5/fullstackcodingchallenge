@@ -60,7 +60,7 @@ spec:
     - protocol: TCP
       port: 8083
       targetPort: 8083
-  type: ClusterIP  # Change to ClusterIP
+  type: LoadBalancer  # Change to ClusterIP
 
 ---
 # Deployment for mysqldblogin
