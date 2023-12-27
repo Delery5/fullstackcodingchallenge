@@ -1,3 +1,5 @@
+# api-gateway-deployment.yaml
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,12 +31,14 @@ spec:
             - name: eureka.instance.hostName
               value: API-GATEWAY-SERVICE
             - name: LOGIN_SERVICE_URI
-              value: http://LOGIN-SERVICE  # Use the DNS name of LOGIN-SERVICE
+              value: http://LOGIN-SERVICE.namespace.svc.cluster.local  # Use the full DNS name of LOGIN-SERVICE
             - name: EMPLOYEE_SERVICE_URI
-              value: http://EMPLOYEE-SERVICE
+              value: http://EMPLOYEE-SERVICE.namespace.svc.cluster.local
             - name: REGISTRATION_SERVICE_URI
-              value: http://REGISTRATION-SERVICE
+              value: http://REGISTRATION-SERVICE.namespace.svc.cluster.local
 ---
+# api-gateway-service.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
