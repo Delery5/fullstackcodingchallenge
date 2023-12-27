@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's api-gateway-service.yaml">
+    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8/api-gateway.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/api-gateway.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8/discovery-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/discovery-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/employee.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/employee.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8/login-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/login-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/registration-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/registration-service.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703606123291</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1703606725970</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703606725970</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +248,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made changes to K8's" />
     <MESSAGE value="Made changes to K8's login and registration" />
     <MESSAGE value="Made changes to K8's employee and discovery" />
     <MESSAGE value="Made changes to K8's added ClusterIP" />
@@ -247,6 +255,7 @@
     <MESSAGE value="Made changes to K8's login-service.yaml" />
     <MESSAGE value="Made changes to K8's discovery-service.yaml" />
     <MESSAGE value="Made changes to K8's api-gateway-service.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made changes to K8's api-gateway-service.yaml" />
+    <MESSAGE value="Made changes to K8's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made changes to K8's" />
   </component>
 </project>

@@ -19,13 +19,15 @@ spec:
             - containerPort: 8085
           env:
             - name: eureka.client.service-url.defaultZone
-              value: http://discovery-service:8761/eureka/
-            - name: EMPLOYEE_SERVICE_URI
-              value: http://EMPLOYEE-SERVICE
-            - name: LOGIN_SERVICE_URI
-              value: http://login-service:8083
-            - name: REGISTRATION_SERVICE_URI
-              value: http://REGISTRATION-SERVICE
+              value: http://discovery-service:8761/eureka
+            - name: eureka.client.register-with-eureka
+              value: "true"
+            - name: eureka.client.prefer-ip-address
+              value: "true"
+            - name: eureka.client.fetch-registry
+              value: "true"
+            - name: eureka.instance.hostName
+              value: API-GATEWAY-SERVICE
 ---
 apiVersion: v1
 kind: Service
