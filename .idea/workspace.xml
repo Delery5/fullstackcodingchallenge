@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's login-service.yaml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's api-gateway.yaml">
       <change beforePath="$PROJECT_DIR$/K8/api-gateway.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/api-gateway.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703784087762</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Made changes to K8's api-gateway.yaml">
+      <option name="closed" value="true" />
+      <created>1703785718070</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703785718070</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,8 +307,8 @@
     <MESSAGE value="Made changes to K8's discovery-service.yaml" />
     <MESSAGE value="Made changes to K8's api-gateway-service.yaml" />
     <MESSAGE value="Made changes to K8's" />
-    <MESSAGE value="Made changes to K8's api-gateway.yaml" />
     <MESSAGE value="Made changes to K8's login-service.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made changes to K8's login-service.yaml" />
+    <MESSAGE value="Made changes to K8's api-gateway.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made changes to K8's api-gateway.yaml" />
   </component>
 </project>

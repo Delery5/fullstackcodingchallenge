@@ -30,7 +30,7 @@ spec:
             - name: eureka.instance.hostName
               value: API-GATEWAY-SERVICE
             - name: LOGIN_SERVICE_URI
-              value: http://LOGIN-SERVICE:8083  # Use the full DNS name of LOGIN-SERVICE
+              value: http://34.30.230.48:8083  # Use the full DNS name of LOGIN-SERVICE
             - name: EMPLOYEE_SERVICE_URI
               value: http://EMPLOYEE-SERVICE.namespace.svc.cluster.local
             - name: REGISTRATION_SERVICE_URI
