@@ -1,4 +1,4 @@
-# Deployment for loginservice
+# loginservice-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -44,8 +44,10 @@ spec:
             - name: spring.jpa.properties.hibernate.dialect
               value: org.hibernate.dialect.MySQLDialect
             - name: JWT_SECRET
-              value: daf66e01593f61a15b857cf433aae03a005812b31234e149036bcc8dee755dbb  # Add this line for JWT_SECRET
-
+              valueFrom:
+                configMapKeyRef:
+                  name: jwt-secret-config
+                  key: JWT_SECRET
 ---
 # Service for loginservice
 apiVersion: v1
