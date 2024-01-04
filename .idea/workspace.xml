@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's api-gateway.yaml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8/api-gateway.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/api-gateway.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/login-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/login-service.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,30 +41,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Maven.api-gateway [clean].executor": "Run",
-    "Maven.api-gateway [install].executor": "Run",
-    "Maven.discovery-service [clean].executor": "Run",
-    "Maven.discovery-service [install].executor": "Run",
-    "Maven.employe-service [clean].executor": "Run",
-    "Maven.employe-service [install].executor": "Run",
-    "Maven.loginservice [clean].executor": "Run",
-    "Maven.loginservice [install].executor": "Run",
-    "Maven.registrationservice [clean].executor": "Run",
-    "Maven.registrationservice [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/8J0976897/Documents/fullstackcodingchallenge",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.employe-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.employe-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.loginservice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.loginservice [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.registrationservice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.registrationservice [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/8J0976897/Documents/fullstackcodingchallenge&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/registrationservice/src/main/resources" />
@@ -285,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703785718070</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Made changes to K8's api-gateway.yaml">
+      <option name="closed" value="true" />
+      <created>1703786472552</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703786472552</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
