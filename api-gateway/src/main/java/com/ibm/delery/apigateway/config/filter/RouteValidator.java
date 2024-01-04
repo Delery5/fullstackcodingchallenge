@@ -11,11 +11,11 @@ public class RouteValidator {
 
     public static final List<String> openApiEndpoints = List.of(
             "/api/gateway/health",
-            "api/employee/health",
-            "api/registration/health",
-            "api/auth/health",
-            "api/auth/generate-token",
-            "api/auth/validate-token"
+            "/api/employee/health",
+            "/api/registration/health",
+            "/api/auth/health",
+            "/api/auth/generate-token",
+            "/api/auth/validate-token"
     );
 
     public Predicate<ServerHttpRequest> isSecured =
