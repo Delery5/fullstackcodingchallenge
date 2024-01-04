@@ -29,12 +29,12 @@ spec:
               value: "true"
             - name: eureka.instance.hostName
               value: API-GATEWAY-SERVICE
-            - name: LOGIN_SERVICE_URI
-              value: http://LOGIN-SERVICE
-            - name: EMPLOYEE_SERVICE_URI
-              value: http://EMPLOYEE-SERVICE
-            - name: REGISTRATION_SERVICE_URI
-              value: http://REGISTRATION-SERVICE
+#            - name: LOGIN_SERVICE_URI
+#              value: http://LOGIN-SERVICE
+#            - name: EMPLOYEE_SERVICE_URI
+#              value: http://EMPLOYEE-SERVICE
+#            - name: REGISTRATION_SERVICE_URI
+#              value: http://REGISTRATION-SERVICE
             - name: JWT_SECRET
               valueFrom:
                 configMapKeyRef:
