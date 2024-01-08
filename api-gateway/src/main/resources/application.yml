@@ -2,33 +2,40 @@ server:
   port: 8085
 
 spring:
+  application:
+    name: api-gateway
   cloud:
     gateway:
       routes:
-        - id: LOGIN-SERVICE
-          uri: lb://LOGIN-SERVICE
+        - id: login-service
+          uri: ${LOGIN_URI:http://login-service:8083}  # Change localhost to the actual host if needed
           predicates:
             - Path=/api/auth/**
           filters:
             - AuthenticationFilter
 
-
-        - id: REGISTRATION-SERVICE
-          uri: lb://REGISTRATION-SERVICE
+        - id: registration-service
+          uri: ${REGISTRATION_URI:http://registration-service:8082}  # Change localhost to the actual host if needed
           predicates:
             - Path=/api/registration/**
           filters:
             - AuthenticationFilter
 
-        - id: EMPLOYEE-SERVICE
-          uri: lb://EMPLOYEE-SERVICE
+        - id: employee-service
+          uri: ${EMPLOYEE_URI:http://employee-service:8081}  # Change localhost to the actual host if needed
           predicates:
             - Path=/api/employee/**
           filters:
             - AuthenticationFilter
 
-  application:
-    name: api-gateway
+
+#  application:
+#    name: api-gateway
+
+#JWT
+app:
+  jwt-secret: daf66e01593f61a15b857cf433aae03a005812b31234e149036bcc8dee755dbb
+
 
 #eureka:
 #  client:
@@ -75,3 +82,36 @@ spring:
 
 # This allows API-Gateway to search for services on Eureka Server
 #spring.cloud.gateway.discovery.locator.enabled=true
+
+
+
+
+
+
+#spring:
+#  application:
+#    name: api-gateway
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: LOGIN-SERVICE
+#          uri: lb://LOGIN-SERVICE
+#          predicates:
+#            - Path=/api/auth/**
+#          filters:
+#            - AuthenticationFilter
+#
+#
+#        - id: REGISTRATION-SERVICE
+#          uri: lb://REGISTRATION-SERVICE
+#          predicates:
+#            - Path=/api/registration/**
+#          filters:
+#            - AuthenticationFilter
+#
+#        - id: EMPLOYEE-SERVICE
+#          uri: lb://EMPLOYEE-SERVICE
+#          predicates:
+#            - Path=/api/employee/**
+#          filters:
+#            - AuthenticationFilter

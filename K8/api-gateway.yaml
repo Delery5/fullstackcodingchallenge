@@ -19,27 +19,25 @@ spec:
           ports:
             - containerPort: 8085
           env:
-            - name: eureka.client.service-url.defaultZone
+            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
               value: http://discovery-service:8761/eureka/
-            - name: eureka.client.register-with-eureka
-              value: "true"
-            - name: eureka.client.prefer-ip-address
-              value: "true"
-            - name: eureka.client.fetch-registry
-              value: "true"
-            - name: eureka.instance.hostName
-              value: API-GATEWAY-SERVICE
-#            - name: LOGIN_SERVICE_URI
-#              value: http://LOGIN-SERVICE
-#            - name: EMPLOYEE_SERVICE_URI
-#              value: http://EMPLOYEE-SERVICE
-#            - name: REGISTRATION_SERVICE_URI
-#              value: http://REGISTRATION-SERVICE
-            - name: JWT_SECRET
-              valueFrom:
-                configMapKeyRef:
-                  name: jwt-secret-config
-                  key: JWT_SECRET
+#            - name: eureka.client.register-with-eureka
+#              value: "true"
+#            - name: eureka.client.prefer-ip-address
+#              value: "true"
+#            - name: eureka.client.fetch-registry
+#              value: "true"
+            - name: EMPLOYEE_URI
+              value: http://employee-service:8081
+            - name: LOGIN_URI
+              value: http://login-service:8083
+            - name: REGISTRATION_URI
+              value: http://registration-service:8082
+#                - name: JWT_SECRET
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: jwt-secret-config
+#                  key: JWT_SECRET
 ---
 # api-gateway-service.yaml
 apiVersion: v1

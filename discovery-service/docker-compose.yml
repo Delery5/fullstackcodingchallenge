@@ -8,11 +8,12 @@ services:
       - "8081:8081"
     environment:
       - eureka.client.service-url.defaultZone=http://discovery-service:8761/eureka/
+      - employee-service.url=http://employee-service:8081/api/employee/create
     depends_on:
       - mysqldb
       - discovery-service
   mysqldb:
-    platform: linux/x86_64   #This must be here because it's on MAC instead of Windows
+    platform: linux/x86_64
     image: "mysql:5.7"
     restart: always
     ports:
@@ -39,7 +40,7 @@ services:
       - mysqldb
       - discovery-service
   mysqldbregistration:
-    platform: linux/x86_64   #This must be here because it's on MAC instead of Windows
+    platform: linux/x86_64
     image: "mysql:5.7"
     restart: always
     ports:
@@ -61,7 +62,7 @@ services:
       - mysqldb
       - discovery-service
   mysqldblogin:
-    platform: linux/x86_64   #This must be here because it's on MAC instead of Windows
+    platform: linux/x86_64
     image: "mysql:5.7"
     restart: always
     ports:
@@ -105,9 +106,3 @@ services:
     restart: on-failure
     depends_on:
       - zookeeper
-
-
-
-
-
-# delery/employe-service:s4

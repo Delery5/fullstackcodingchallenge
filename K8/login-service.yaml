@@ -43,11 +43,11 @@ spec:
               value: "true"
             - name: spring.jpa.properties.hibernate.dialect
               value: org.hibernate.dialect.MySQLDialect
-            - name: JWT_SECRET
-              valueFrom:
-                configMapKeyRef:
-                  name: jwt-secret-config
-                  key: JWT_SECRET
+#            - name: JWT_SECRET
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: jwt-secret-config
+#                  key: JWT_SECRET
 ---
 # Service for loginservice
 apiVersion: v1

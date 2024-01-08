@@ -12,6 +12,7 @@ import com.ibm.delery.registrationservice.repository.EmployeeRegistrationReposit
 import com.ibm.delery.registrationservice.service.ProducerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -22,12 +23,13 @@ public class ProducerServiceImpl implements ProducerService {
     private static Logger logger = LoggerFactory.getLogger(ProducerServiceImpl.class);
 
 
-
+    private final ObjectMapper objectMapper; // Reuse ObjectMapper
 
     private final EmployeeRegistrationRepository employeeRegistrationRepository;
     private final KafkaProducer kafkaProducer;
 
-    public ProducerServiceImpl(EmployeeRegistrationRepository employeeRegistrationRepository, KafkaProducer kafkaProducer) {
+    public ProducerServiceImpl(ObjectMapper objectMapper, EmployeeRegistrationRepository employeeRegistrationRepository, KafkaProducer kafkaProducer) {
+        this.objectMapper = objectMapper;
         this.employeeRegistrationRepository = employeeRegistrationRepository;
         this.kafkaProducer = kafkaProducer;
     }
@@ -47,12 +49,12 @@ public class ProducerServiceImpl implements ProducerService {
 
             Registration newRegistration = employeeRegistrationRepository.save(registration);
 
-           ;
+            ;
 
             // convert Employee entity to EmployeeDTO
             RegistrationDto employeeResponse = mapToDTO(newRegistration);
 
-
+            // convert Java objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
             String employeeStr;
 
@@ -63,7 +65,8 @@ public class ProducerServiceImpl implements ProducerService {
                 throw new RuntimeException("Error serializing RegistrationEntity to string:", ex);
             }
 
-            kafkaProducer.send("registrationservice", employeeStr);
+            // Send the employee registration to Kafka topic "registered-employees"
+            kafkaProducer.send("registered-employees", employeeStr);
 
             logger.info("Employee email {} successfully registered.", employeeResponse.getEmail());
 
@@ -76,39 +79,6 @@ public class ProducerServiceImpl implements ProducerService {
     public RegistrationDto approveEmployee(String email, RegistrationDto registrationDto) throws EmployeeAlreadyApprovedException, EmployeeNotFoundException {
 
 
-//        if (!employeeRegistrationRepository.findByEmail(email).isPresent()) {
-//            logger.error("Employee email {} not found.", email);
-//            throw new EmployeeNotFoundException("Employee email " + email + " not found.");
-//        }
-//
-//        Registration employee = employeeRegistrationRepository.findByEmail(email).orElseThrow();
-//
-//        if ("APPROVED".equals(employee.getStatus())) //(employee.getStatus().equals("APPROVED"))
-//        {
-//            logger.error("Employee email {} already approved.", employee.getEmail());
-//            throw new EmployeeNotFoundException("Employee email " + employee.getEmail() + " already approved.");
-//        }
-//
-//        employee.setStatus("APPROVED");
-//
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        String employeeStr;
-//
-//
-//        try {
-//            employeeStr = objectMapper.writeValueAsString(employee);
-//        } catch (JsonProcessingException ex) {
-//            logger.error("Error serializing RegistrationEntity to string: {}", ex.getMessage());
-//            throw new RuntimeException("Error serializing RegistrationEntity to string:", ex);
-//        }
-//        employee.setStatus("APPROVED");
-//        kafkaProducer.send("registrationservice", employeeStr);
-//
-//        logger.info("Employee email {} successfully approved.", employee.getEmail());
-//
-//
-//
-//        return new RegistrationDto(employee);
         Optional<Registration> optionalEmployee = employeeRegistrationRepository.findByEmail(email);
 
         if (optionalEmployee.isPresent()) {
@@ -116,31 +86,23 @@ public class ProducerServiceImpl implements ProducerService {
             Registration existingEmployee = optionalEmployee.get();
             existingEmployee.setStatus("APPROVED");
 
-//            existingEmployee.setStatus(registrationDto.getStatus());
-//            existingEmployee.setStatus("APPROVED");
-
             // Save the updated employee
             employeeRegistrationRepository.save(existingEmployee);
 
-
-//            if ("APPROVED".equals(existingEmployee.getStatus())) //(existingEmployee.getStatus().equals("APPROVED"))
-//        {
-//            logger.error("Employee email {} already approved.", existingEmployee.getEmail());
-//            throw new EmployeeNotFoundException("Employee email " + existingEmployee.getEmail() + " already approved.");
-//        }
-
+            // convert Java objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
-        String employeeStr;
-        try {
-            employeeStr = objectMapper.writeValueAsString(existingEmployee);
-        } catch (JsonProcessingException ex) {
-            logger.error("Error serializing RegistrationEntity to string: {}", ex.getMessage());
-            throw new RuntimeException("Error serializing RegistrationEntity to string:", ex);
-        }
-//        existingEmployee.setStatus("APPROVED");
-        kafkaProducer.send("registrationservice", employeeStr);
+            String employeeStr;
+            try {
+                employeeStr = objectMapper.writeValueAsString(existingEmployee);
+            } catch (JsonProcessingException ex) {
+                logger.error("Error serializing RegistrationEntity to string: {}", ex.getMessage());
+                throw new RuntimeException("Error serializing RegistrationEntity to string:", ex);
+            }
 
-        logger.info("Employee email {} successfully approved.", existingEmployee.getEmail());
+            // Send the employee registration to Kafka topic "registered-employees"
+            kafkaProducer.send("registered-employees", employeeStr);
+
+            logger.info("Employee email {} successfully approved.", existingEmployee.getEmail());
 
             // Convert and return the updated employee as RegistrationDto
             return mapToDTO(existingEmployee);
@@ -163,8 +125,8 @@ public class ProducerServiceImpl implements ProducerService {
 
         Registration employee = employeeRegistrationRepository.findByEmail(email).orElseThrow();
 
-            employeeRegistrationRepository.deleteById(employee.getId());
-            logger.info("Employee email {} successfully deleted.", employee.getEmail());
+        employeeRegistrationRepository.deleteById(employee.getId());
+        logger.info("Employee email {} successfully deleted.", employee.getEmail());
     }
 
     private RegistrationDto mapToDTO(Registration registration) {

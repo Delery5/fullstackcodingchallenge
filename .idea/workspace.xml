@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/api-gateway.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/api-gateway.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8/login-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/login-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/filter/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/filter/RouteValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employe-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employe-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginservice/src/main/java/com/ibm/delery/loginservice/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginservice/src/main/java/com/ibm/delery/loginservice/security/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loginservice/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrationservice/src/main/java/com/ibm/delery/registrationservice/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/registrationservice/src/main/java/com/ibm/delery/registrationservice/kafka/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrationservice/src/main/java/com/ibm/delery/registrationservice/service/impl/ProducerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/registrationservice/src/main/java/com/ibm/delery/registrationservice/service/impl/ProducerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrationservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/registrationservice/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,6 +54,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EmployeServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoginserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RegistrationserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.discovery-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.api-gateway [install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
@@ -78,6 +93,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ibm.delery.apigateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ibm.delery.discoveryservice.DiscoveryServiceApplication" />
+      <module name="discovery-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ibm.delery.discoveryservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,19 +152,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="discovery-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="discovery-service/docker-compose.yml" />
-        </settings>
+        <settings />
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Docker.discovery-service: Compose Deployment" />
         <item itemvalue="Application.LoginserviceApplication" />
+        <item itemvalue="Application.DiscoveryServiceApplication" />
         <item itemvalue="Application.RegistrationserviceApplication" />
         <item itemvalue="Application.EmployeServiceApplication" />
       </list>
@@ -311,7 +337,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704389167232</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1704408642729</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1704408642729</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1704409012042</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1704409012042</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

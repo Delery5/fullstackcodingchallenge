@@ -4,26 +4,34 @@ import com.ibm.delery.loginservice.exception.JwtAPIException;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.core.env.Environment;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.security.Key;
-import java.util.ArrayList;
 import java.util.Date;
 
 @Component
 public class JwtTokenProvider {
 
-    @Value("${app.jwt-secret}")
-    private String jwtSecret;
-
     @Value("${app-jwt-expiration-milliseconds}")
     private long jwtExpirationDate;
+    @Value("${app.jwt-secret}")
+    private final String jwtSecret;
 
+    public JwtTokenProvider(Environment env) {
+        this.jwtSecret = env.getProperty("app.jwt-secret");
+        if (this.jwtSecret == null) {
+            throw new IllegalStateException("jwt.secret property not found in environment");
+        }
+    }
+
+    public String getJwtSecret() {
+        return jwtSecret;
+    }
 
     // generate JWT token
     public String generateToken(Authentication authentication) {
