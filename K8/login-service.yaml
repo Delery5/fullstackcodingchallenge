@@ -19,16 +19,16 @@ spec:
           ports:
             - containerPort: 8083
           env:
-            - name: eureka.client.service-url.defaultZone
+            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
               value: http://discovery-service:8761/eureka/
-            - name: eureka.client.register-with-eureka
-              value: "true"
-            - name: eureka.client.prefer-ip-address
-              value: "true"
-            - name: eureka.client.fetch-registry
-              value: "true"
-            - name: eureka.instance.hostName
-              value: LOGIN-SERVICE
+#            - name: eureka.client.register-with-eureka
+#              value: "true"
+#            - name: eureka.client.prefer-ip-address
+#              value: "true"
+#            - name: eureka.client.fetch-registry
+#              value: "true"
+#            - name: eureka.instance.hostName
+#              value: LOGIN-SERVICE
             - name: spring.datasource.url
               value: jdbc:mysql://mysqldblogin-service:3306/logindb
             - name: spring.datasource.username
