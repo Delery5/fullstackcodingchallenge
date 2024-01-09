@@ -22,16 +22,16 @@ spec:
           ports:
             - containerPort: 8082
           env:
-            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
+            - name: eureka.client.service-url.defaultZone
               value: http://discovery-service:8761/eureka/
-#            - name: eureka.client.register-with-eureka
-#              value: "true"
-#            - name: eureka.client.prefer-ip-address
-#              value: "true"
-#            - name: eureka.client.fetch-registry
-#              value: "true"
-#            - name: eureka.instance.hostName
-#              value: REGISTRATION-SERVICE
+            - name: eureka.client.register-with-eureka
+              value: "true"
+            - name: eureka.client.prefer-ip-address
+              value: "true"
+            - name: eureka.client.fetch-registry
+              value: "true"
+            - name: eureka.instance.hostName
+              value: REGISTRATION-SERVICE
             - name: spring.datasource.url
               value: jdbc:mysql://mysqldbregistration:3306/registrationdb
             - name: spring.datasource.username

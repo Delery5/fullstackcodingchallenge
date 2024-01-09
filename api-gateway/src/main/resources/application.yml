@@ -8,21 +8,21 @@ spring:
     gateway:
       routes:
         - id: login-service
-          uri: ${LOGIN_URI:http://login-service:8083}  # Change localhost to the actual host if needed
+          uri: lb://LOGIN-SERVICE  # Change localhost to the actual host if needed
           predicates:
             - Path=/api/auth/**
           filters:
             - AuthenticationFilter
 
         - id: registration-service
-          uri: ${REGISTRATION_URI:http://registration-service:8082}  # Change localhost to the actual host if needed
+          uri: lb://REGISTRATION-SERVICE  # Change localhost to the actual host if needed
           predicates:
             - Path=/api/registration/**
           filters:
             - AuthenticationFilter
 
         - id: employee-service
-          uri: ${EMPLOYEE_URI:http://employee-service:8081}  # Change localhost to the actual host if needed
+          uri: lb://EMPLOYEE-SERVICE  # Change localhost to the actual host if needed
           predicates:
             - Path=/api/employee/**
           filters:
@@ -31,7 +31,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE:http://discovery-service:8761/eureka/}
+      defaultZone: http://discovery-service:8761/eureka/
 
 #  application:
 #    name: api-gateway

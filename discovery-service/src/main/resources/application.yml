@@ -1,25 +1,25 @@
 #server:
-#  port: 8761
-#
-#eureka:
-#  instance:
-#    hostname: localhost
-#  client:
-#    registerWithEureka: false
-#    fetchRegistry: false
-#    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-#  server:
-#    enable-self-preservation: false
-#    eviction-interval-timer-in-ms: 30000
-
-# Server
-server:
   port: 8761
 
-# Discovery
 eureka:
+  instance:
+    hostname: discovery-server
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 30000
+
+## Server
+#server:
+#  port: 8761
+#
+## Discovery
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
 

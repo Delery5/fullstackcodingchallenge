@@ -34,7 +34,7 @@ spec:
           ports:
             - containerPort: 8081
           env:
-            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
+            - name: eureka.client.service-url.defaultZone
               value: http://discovery-service:8761/eureka/
             - name: eureka.client.register-with-eureka
               value: "true"
@@ -42,8 +42,8 @@ spec:
               value: "true"
             - name: eureka.client.fetch-registry
               value: "true"
-#            - name: eureka.instance.hostName
-#              value: EMPLOYEE-SERVICE
+            - name: eureka.instance.hostName
+              value: EMPLOYEE-SERVICE
             - name: spring.datasource.url
               value: jdbc:mysql://mysqldb:3307/employeedb
             - name: spring.datasource.username

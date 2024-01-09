@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's" />
+    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/api-gateway.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/api-gateway.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/employee.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/employee.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/login-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/login-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/registration-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/registration-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employe-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employe-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loginservice/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrationservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/registrationservice/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -435,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704822302821</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1704822996175</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1704822996175</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
