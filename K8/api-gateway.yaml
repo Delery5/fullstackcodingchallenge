@@ -21,11 +21,11 @@ spec:
           env:
             - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
               value: http://discovery-service:8761/eureka/
-            - name: EMPLOYEE-SERVICE
+            - name: EMPLOYEE_URI
               value: http://employee-service:8081
-            - name: LOGIN-SERVICE
+            - name: LOGIN_URI
               value: http://login-service:8083
-            - name: REGISTRATION-SERVICE
+            - name: REGISTRATION_URI
               value: http://registration-service:8082
             - name: JWT_SECRET
               valueFrom:

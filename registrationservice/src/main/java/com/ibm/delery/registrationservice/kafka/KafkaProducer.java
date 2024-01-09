@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.kafka.core.KafkaTemplate;
 
 // Define a KafkaProducer class
+@Component
 public class KafkaProducer {
 
     // Private field to hold the KafkaTemplate instance
