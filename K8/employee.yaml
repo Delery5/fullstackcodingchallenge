@@ -36,12 +36,12 @@ spec:
           env:
             - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
               value: http://discovery-service:8761/eureka/
-#            - name: eureka.client.register-with-eureka
-#              value: "true"
-#            - name: eureka.client.prefer-ip-address
-#              value: "true"
-#            - name: eureka.client.fetch-registry
-#              value: "true"
+            - name: eureka.client.register-with-eureka
+              value: "true"
+            - name: eureka.client.prefer-ip-address
+              value: "true"
+            - name: eureka.client.fetch-registry
+              value: "true"
 #            - name: eureka.instance.hostName
 #              value: EMPLOYEE-SERVICE
             - name: spring.datasource.url
