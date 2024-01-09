@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: loginservice
-          image: delery1/my-coding-challenge-login-service:s4
+          image: delery1/fscc-login-service:s4
           ports:
             - containerPort: 8083
           env:
@@ -61,7 +61,7 @@ spec:
     - protocol: TCP
       port: 8083
       targetPort: 8083
-  type: LoadBalancer  # Change to ClusterIP
+  type: ClusterIP  # Change to ClusterIP
 
 ---
 # Deployment for mysqldblogin
