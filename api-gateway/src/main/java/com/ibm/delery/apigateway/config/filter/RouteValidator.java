@@ -14,7 +14,8 @@ public class RouteValidator {
             "/api/employee/health",
             "/api/registration/health",
             "/api/auth/health",
-            "/api/auth/generate-token"
+            "/api/auth/generate-token",
+            "/api/auth/register"
     );
 
     public Predicate<ServerHttpRequest> isSecured =

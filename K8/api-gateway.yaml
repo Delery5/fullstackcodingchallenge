@@ -19,7 +19,7 @@ spec:
           ports:
             - containerPort: 8085
           env:
-            - name: eureka.client.service-url.defaultZone
+            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
               value: http://discovery-service:8761/eureka/
             - name: EMPLOYEE-SERVICE
               value: http://employee-service:8081

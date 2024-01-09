@@ -27,7 +27,11 @@ spring:
             - Path=/api/employee/**
           filters:
             - AuthenticationFilter
-
+# Discovery
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE:http://discovery-service:8761/eureka/}
 
 #  application:
 #    name: api-gateway
