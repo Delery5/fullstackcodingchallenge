@@ -21,12 +21,20 @@ spec:
           env:
             - name: eureka.client.service-url.defaultZone
               value: http://discovery-service:8761/eureka/
-            - name: EMPLOYEE_URI
-              value: http://EMPLOYEE-SERVICE:8081
-            - name: LOGIN_URI
-              value: http://LOGIN-SERVICE:8083
-            - name: REGISTRATION_URI
-              value: http://REGISTRATION-SERVICE:8082
+            - name: eureka.client.register-with-eureka
+              value: "true"
+            - name: eureka.client.prefer-ip-address
+              value: "true"
+            - name: eureka.client.fetch-registry
+              value: "true"
+            - name: eureka.instance.hostName
+              value: API-GATEWAY
+#            - name: EMPLOYEE_URI
+#              value: http://EMPLOYEE-SERVICE:8081
+#            - name: LOGIN_URI
+#              value: http://LOGIN-SERVICE:8083
+#            - name: REGISTRATION_URI
+#              value: http://REGISTRATION-SERVICE:8082
             - name: JWT_SECRET
               valueFrom:
                 configMapKeyRef:
