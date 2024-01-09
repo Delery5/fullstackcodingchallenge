@@ -22,11 +22,11 @@ spec:
             - name: eureka.client.service-url.defaultZone
               value: http://discovery-service:8761/eureka/
             - name: EMPLOYEE_URI
-              value: http://employee-service:8081
+              value: http://EMPLOYEE-SERVICE:8081
             - name: LOGIN_URI
-              value: http://login-service:8083
+              value: http://LOGIN-SERVICE:8083
             - name: REGISTRATION_URI
-              value: http://registration-service:8082
+              value: http://REGISTRATION-SERVICE:8082
             - name: JWT_SECRET
               valueFrom:
                 configMapKeyRef:
