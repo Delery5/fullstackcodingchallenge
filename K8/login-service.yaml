@@ -28,7 +28,7 @@ spec:
             - name: eureka.client.fetch-registry
               value: "true"
             - name: eureka.instance.hostName
-              value: LOGIN-SERVICE
+              value: login-service
             - name: spring.datasource.url
               value: jdbc:mysql://mysqldblogin-service:3306/logindb
             - name: spring.datasource.username
