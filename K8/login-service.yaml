@@ -1,8 +1,3 @@
-
-    - protocol: TCP
-      port: 8083
-      targetPort: 8083
-  type: ClusterIP  # Change to ClusterIP
 # loginservice-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -24,29 +19,29 @@ spec:
           ports:
             - containerPort: 8083
           env:
-            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+            - name: eureka.client.service-url.defaultZone
               value: http://discovery-service:8761/eureka/
-            - name: EUREKA_CLIENT_REGISTER-WITH-EUREKA
+            - name: eureka.client.register-with-eureka
               value: "true"
-            - name: EUREKA_CLIENT_PREFER-IP-ADDRESS
+            - name: eureka.client.prefer-ip-address
               value: "true"
-            - name: EUREKA_CLIENT_FETCH-REGISTRY
+            - name: eureka.client.fetch-registry
               value: "true"
-            - name: EUREKA_INSTANCE_HOSTNAME
+            - name: eureka.instance.hostName
               value: login-service
-            - name: SPRING_DATASOURCE_URL
+            - name: spring.datasource.url
               value: jdbc:mysql://mysqldblogin-service:3306/logindb
-            - name: SPRING_DATASOURCE_USERNAME
+            - name: spring.datasource.username
               value: delery
-            - name: SPRING_DATASOURCE_PASSWORD
+            - name: spring.datasource.password
               value: delery
-            - name: SPRING_DATASOURCE_DRIVER-CLASS-NAME
+            - name: spring.datasource.driver-class-name
               value: com.mysql.cj.jdbc.Driver
-            - name: SPRING_JPA_HIBERNATE_DDL-AUTO
+            - name: spring.jpa.hibernate.ddl-auto
               value: update
-            - name: SPRING_JPA_SHOW-SQL
+            - name: spring.jpa.show-sql
               value: "true"
-            - name: SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT
+            - name: spring.jpa.properties.hibernate.dialect
               value: org.hibernate.dialect.MySQLDialect
             - name: JWT_SECRET
               valueFrom:
@@ -63,7 +58,11 @@ spec:
   selector:
     app: loginservice
   ports:
----
+    - protocol: TCP
+      port: 8083
+      targetPort: 8083
+  type: ClusterIP  # Change to ClusterIP
+
 # Deployment for mysqldblogin
 apiVersion: apps/v1
 kind: Deployment
@@ -95,7 +94,6 @@ spec:
               value: delery
       restartPolicy: Always
       # Add volume mounts, resources, etc. if needed
-
 ---
 # Service for mysqldblogin
 apiVersion: v1
