@@ -20,7 +20,7 @@ spec:
             - containerPort: 8083
           env:
             - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
-              value: http://discovery-service:8761/eureka/
+              value: http://10.4.1.16:8761/eureka/
             - name: EUREKA_CLIENT_REGISTER-WITH-EUREKA
               value: "true"
             - name: EUREKA_CLIENT_PREFER-IP-ADDRESS
