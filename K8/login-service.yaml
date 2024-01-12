@@ -19,29 +19,29 @@ spec:
           ports:
             - containerPort: 8083
           env:
-            - name: eureka.client.service-url.defaultZone
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
               value: http://discovery-service:8761/eureka/
-            - name: eureka.client.register-with-eureka
+            - name: EUREKA_CLIENT_REGISTER-WITH-EUREKA
               value: "true"
-            - name: eureka.client.prefer-ip-address
+            - name: EUREKA_CLIENT_PREFER-IP-ADDRESS
               value: "true"
-            - name: eureka.client.fetch-registry
+            - name: EUREKA_CLIENT_FETCH-REGISTRY
               value: "true"
-            - name: eureka.instance.hostName
+            - name: EUREKA_INSTANCE_HOSTNAME
               value: login-service
-            - name: spring.datasource.url
+            - name: SPRING_DATASOURCE_URL
               value: jdbc:mysql://mysqldblogin-service:3306/logindb
-            - name: spring.datasource.username
+            - name: SPRING_DATASOURCE_USERNAME
               value: delery
-            - name: spring.datasource.password
+            - name: SPRING_DATASOURCE_PASSWORD
               value: delery
-            - name: spring.datasource.driver-class-name
+            - name: SPRING_DATASOURCE_DRIVER-CLASS-NAME
               value: com.mysql.cj.jdbc.Driver
-            - name: spring.jpa.hibernate.ddl-auto
+            - name: SPRING_JPA_HIBERNATE_DDL-AUTO
               value: update
-            - name: spring.jpa.show-sql
+            - name: SPRING_JPA_SHOW-SQL
               value: "true"
-            - name: spring.jpa.properties.hibernate.dialect
+            - name: SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT
               value: org.hibernate.dialect.MySQLDialect
             - name: JWT_SECRET
               valueFrom:
