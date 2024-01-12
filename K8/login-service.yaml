@@ -1,3 +1,8 @@
+
+    - protocol: TCP
+      port: 8083
+      targetPort: 8083
+  type: ClusterIP  # Change to ClusterIP
 # loginservice-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -20,7 +25,7 @@ spec:
             - containerPort: 8083
           env:
             - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
-              value: http://10.4.1.16:8761/eureka/
+              value: http://discovery-service:8761/eureka/
             - name: EUREKA_CLIENT_REGISTER-WITH-EUREKA
               value: "true"
             - name: EUREKA_CLIENT_PREFER-IP-ADDRESS
@@ -58,11 +63,6 @@ spec:
   selector:
     app: loginservice
   ports:
-    - protocol: TCP
-      port: 8083
-      targetPort: 8083
-  type: ClusterIP  # Change to ClusterIP
-
 ---
 # Deployment for mysqldblogin
 apiVersion: apps/v1
