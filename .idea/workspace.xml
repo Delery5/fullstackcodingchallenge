@@ -173,14 +173,6 @@
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
     </task>
-    <task id="LOCAL-00003" summary="Made changes to K8's employee and discovery">
-      <option name="closed" value="true" />
-      <created>1703143030857</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1703143030857</updated>
-    </task>
     <task id="LOCAL-00004" summary="Made changes to K8's added ClusterIP">
       <option name="closed" value="true" />
       <created>1703271208244</created>
@@ -565,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705089900201</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1705099680259</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1705099680259</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

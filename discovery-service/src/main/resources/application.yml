@@ -3,7 +3,7 @@ port: 8761
 
 eureka:
   instance:
-    hostname: discovery-server
+    hostname: discovery-service
   client:
     registerWithEureka: false
     fetchRegistry: false
@@ -12,14 +12,3 @@ eureka:
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 30000
-
-## Server
-#server:
-#  port: 8761
-#
-## Discovery
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-

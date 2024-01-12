@@ -21,15 +21,14 @@ spec:
           env:
             - name: eureka.client.service-url.defaultZone
               value: http://discovery-service:8761/eureka/
-
-            #            - name: eureka.client.register-with-eureka
-#              value: "true"
-#            - name: eureka.client.prefer-ip-address
-#              value: "true"
-#            - name: eureka.client.fetch-registry
-#              value: "true"
-#            - name: eureka.instance.hostName
-#              value: login-service
+            - name: eureka.client.register-with-eureka
+              value: "true"
+            - name: eureka.client.prefer-ip-address
+              value: "true"
+            - name: eureka.client.fetch-registry
+              value: "true"
+            - name: eureka.instance.hostName
+              value: login-service
             - name: spring.datasource.url
               value: jdbc:mysql://mysqldblogin-service:3306/logindb
             - name: spring.datasource.username
