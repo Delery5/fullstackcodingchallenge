@@ -1,4 +1,3 @@
-#
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,17 +21,3 @@ spec:
             - name: eureka.client.serviceUrl.defaultZone
               value: http://discovery-service:8761/eureka/
       restartPolicy: Always
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: discovery-service
-spec:
-  selector:
-    app: discovery-service
-  ports:
-    - protocol: TCP
-      port: 8761
-      targetPort: 8761
-  type: ClusterIP  # Change the service type to ClusterIP
