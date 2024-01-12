@@ -28,7 +28,7 @@ spec:
             - name: eureka.client.fetch-registry
               value: "true"
             - name: eureka.instance.hostName
-              value: API-GATEWAY
+              value: api-gateway
             - name: EMPLOYEE_URI
               value: http://employee-service:8081
             - name: LOGIN_URI
