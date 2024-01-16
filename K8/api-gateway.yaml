@@ -32,7 +32,7 @@ spec:
             - name: EMPLOYEE_URI
               value: http://employee-service:8081
             - name: LOGIN_URI
-              value: http://LOGIN-SERVICE:8083
+              value: http://login-service:8083
             - name: REGISTRATION_URI
               value: http://registration-service:8082
             - name: JWT_SECRET
