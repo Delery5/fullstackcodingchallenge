@@ -31,7 +31,7 @@ spec:
             - name: KAFKA_ADVERTISED_LISTENERS
               value: PLAINTEXT://kafka:9092, PLAINTEXT_HOST://kafka:29092
             - name: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
-              value: "1"
+              value: "3"  # Adjust the replication factor as needed
 
           livenessProbe:
             tcpSocket:
