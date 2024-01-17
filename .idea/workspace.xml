@@ -7,6 +7,8 @@
     <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8/registration-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/registration-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrationservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/registrationservice/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,14 +176,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Made changes to K8's">
-      <option name="closed" value="true" />
-      <created>1704814034316</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1704814034316</updated>
     </task>
     <task id="LOCAL-00029" summary="Made changes to K8's">
       <option name="closed" value="true" />
@@ -567,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705456739746</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1705457790828</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1705457790828</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
