@@ -1,3 +1,4 @@
+# zookeeper-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -40,6 +41,19 @@ spec:
             claimName: zookeeper-data
 
 ---
+# zookeeper-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: zookeeper
+spec:
+  ports:
+    - port: 2181
+  selector:
+    app: zookeeper
+
+---
+# zookeeper-pvc.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
