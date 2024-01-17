@@ -22,6 +22,8 @@ spec:
           ports:
             - containerPort: 8082
           env:
+            - name: EMPLOYEE_SERVICE_URL
+              value: http://employee-service:8081/api/employee/create
             - name: eureka.client.service-url.defaultZone
               value: http://discovery-service:8761/eureka/
             - name: eureka.client.register-with-eureka
