@@ -174,14 +174,6 @@
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
     </task>
-    <task id="LOCAL-00014" summary="Made changes to K8's login-service.yaml">
-      <option name="closed" value="true" />
-      <created>1703707055204</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1703707055204</updated>
-    </task>
     <task id="LOCAL-00015" summary="Made changes to K8's login-service.yaml">
       <option name="closed" value="true" />
       <created>1703784087762</created>
@@ -566,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705449278307</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1705450036713</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1705450036713</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

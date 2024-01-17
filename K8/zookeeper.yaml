@@ -38,3 +38,15 @@ spec:
         - name: zookeeper-data
           persistentVolumeClaim:
             claimName: zookeeper-data
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: zookeeper-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi  # Adjust the storage size as needed
