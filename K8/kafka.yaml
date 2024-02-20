@@ -45,7 +45,9 @@ spec:
         - name: kafka-data
           persistentVolumeClaim:
             claimName: kafka-data
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -55,3 +57,4 @@ spec:
     - port: 9092
   selector:
     app: kafka
+
