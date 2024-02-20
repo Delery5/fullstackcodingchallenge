@@ -1,5 +1,11 @@
 version: "3.8"
 services:
+  angular-ui:
+    image: "angular-ui"  # Use the existing angular-ui image
+    ports:
+      - "4200:4200"  # Map host port 4200 to container port 4200
+    depends_on:
+      - api-gateway
   employe-service:
     image: "delery/employe-service:s4"
     container_name: employe-service

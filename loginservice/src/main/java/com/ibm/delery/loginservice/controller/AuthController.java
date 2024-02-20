@@ -18,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/auth")
 @Validated
+//@CrossOrigin(origins = "http://localhost:4200")
 public class AuthController {
 
    private AuthService authService;
@@ -47,15 +48,6 @@ public class AuthController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @GetMapping("/validate-token")
-    public ResponseEntity<String> validateTokens(@RequestParam(name = "token") String token) {
-        if (jwtTokenProvider.validateToken(token)) {
-            return ResponseEntity.ok("Token is valid");
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid token");
-        }
-    }
-
     @PostMapping("/generate-token")
     public ResponseEntity<JwtAuthResponse> generateToken(@RequestBody LoginDto loginDto) {
         String token = authService.generateToken(loginDto);
@@ -64,6 +56,15 @@ public class AuthController {
         jwtAuthResponse.setAccessToken(token);
 
         return ResponseEntity.ok(jwtAuthResponse);
+    }
+
+    @GetMapping("/validate-token")
+    public ResponseEntity<String> validateTokens(@RequestParam(name = "token") String token) {
+        if (jwtTokenProvider.validateToken(token)) {
+            return ResponseEntity.ok("Token is valid");
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid token");
+        }
     }
 }
 
