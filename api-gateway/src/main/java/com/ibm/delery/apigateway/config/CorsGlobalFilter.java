@@ -13,6 +13,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.List;
 
+// CORS CLASS
 @Component
 public class CorsGlobalFilter implements WebFilter {
     @Override
