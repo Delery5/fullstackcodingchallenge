@@ -16,8 +16,8 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowedOrigins(Arrays.asList(
-                "http://localhost:4200",
-                "http://34.27.82.55"
+                "http://35.232.9.232",
+                "*" // Allow requests from any other origin
         ));
         corsConfiguration.setAllowedMethods(Arrays.asList(
                 HttpMethod.GET.name(),
