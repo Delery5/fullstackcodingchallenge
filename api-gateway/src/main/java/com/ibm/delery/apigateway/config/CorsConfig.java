@@ -1,42 +1,32 @@
 package com.ibm.delery.apigateway.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
-import java.util.Arrays;
+import org.springframework.web.cors.reactive.CorsConfigurationSource;
+import org.springframework.web.cors.reactive.CorsWebFilter;
+import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
 @Configuration
 public class CorsConfig {
 
     @Bean
-    public CorsFilter corsFilter() {
+    public CorsWebFilter corsWebFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(Arrays.asList(
-                "http://localhost:4200",
-                "http://34.27.82.55:80"
-        ));
-        corsConfiguration.setAllowedMethods(Arrays.asList(
-                HttpMethod.GET.name(),
-                HttpMethod.POST.name(),
-                HttpMethod.PUT.name(),
-                HttpMethod.DELETE.name(),
-                HttpMethod.OPTIONS.name()
-        ));
-        corsConfiguration.setAllowedHeaders(Arrays.asList(
-                "Authorization",
-                "Cache-Control",
-                "Content-Type"
-        ));
+        corsConfiguration.addAllowedOrigin("*");
+        corsConfiguration.addAllowedMethod("*");
+        corsConfiguration.addAllowedHeader("*");
         corsConfiguration.setAllowCredentials(true);
         corsConfiguration.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfiguration);
 
-        return new CorsFilter(source);
+        // Explicit casting to CorsConfigurationSource
+        CorsConfigurationSource corsConfigurationSource = (CorsConfigurationSource) source;
+
+        return new CorsWebFilter(corsConfigurationSource);
     }
 }
+
