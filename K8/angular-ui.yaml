@@ -30,11 +30,3 @@ spec:
           image: delery1/fscc-angular-ui
           ports:
             - containerPort: 4200
-          volumeMounts:
-            - name: proxy-config-volume
-              mountPath: /app/proxy.conf.json
-              subPath: proxy.conf.json
-      volumes:
-        - name: proxy-config-volume
-          configMap:
-            name: proxy-config

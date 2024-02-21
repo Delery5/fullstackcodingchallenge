@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   angular-ui:
-    image: "angular-ui"  # Use the existing angular-ui image
+    image: "delery1/fscc-angular-ui:latest"  # Use the existing angular-ui image
     ports:
       - "4200:4200"  # Map host port 4200 to container port 4200
     depends_on:
@@ -32,7 +32,7 @@ services:
     image: "delery/discovery-service:s4"
     container_name: discovery-service
     ports:
-      - 8761:8761
+      - "8761:8761"
   registration-service:
     image: "delery/registrationservice:s4"
     container_name: registration-service

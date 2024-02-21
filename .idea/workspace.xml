@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's" />
+    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8/angular-ui.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/angular-ui.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +83,7 @@
       <recent name="$PROJECT_DIR$/loginservice/src/main/java/com/ibm/delery/loginservice" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.discovery-service.angular-ui: Compose Deployment">
+  <component name="RunManager" selected="Docker.discovery-service: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ibm.delery.apigateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -148,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.discovery-service.angular-ui: Compose Deployment" />
         <item itemvalue="Docker.discovery-service: Compose Deployment" />
+        <item itemvalue="Docker.discovery-service.angular-ui: Compose Deployment" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.RegistrationserviceApplication" />
         <item itemvalue="Application.EmployeServiceApplication" />
@@ -172,14 +176,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Made changes to K8's">
-      <option name="closed" value="true" />
-      <created>1705100945081</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1705100945081</updated>
     </task>
     <task id="LOCAL-00055" summary="Made changes to K8's">
       <option name="closed" value="true" />
@@ -565,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708534885366</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1708535579108</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1708535579108</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
