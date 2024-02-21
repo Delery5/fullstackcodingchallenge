@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
-      <change beforePath="$PROJECT_DIR$/K8/angular-ui.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8/angular-ui.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-ui/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/angular-ui/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +23,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/angular-ui" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/employe-service/src/main/java/com/ibm/delery/employeservice/service/EmployeeServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
@@ -174,14 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Made changes to K8's">
-      <option name="closed" value="true" />
-      <created>1705099680259</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1705099680259</updated>
     </task>
     <task id="LOCAL-00053" summary="Made changes to K8's">
       <option name="closed" value="true" />
@@ -567,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708532576181</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1708533168789</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1708533168789</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
