@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: proxy-config
+data:
+  proxy.conf.json: |
+    {
+      "/api": {
+        "target": "http://35.224.142.217:8085",
+        "secure": false,
+        "changeOrigin": true
+      }
+    }
+
