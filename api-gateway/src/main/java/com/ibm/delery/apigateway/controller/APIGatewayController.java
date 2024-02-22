@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = "/api/gateway")
+@CrossOrigin(origins = "http://35.232.9.232")
 public class APIGatewayController {
 
     @GetMapping(path = "/health")
