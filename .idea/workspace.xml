@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe-service/src/main/java/com/ibm/delery/employeservice/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employe-service/src/main/java/com/ibm/delery/employeservice/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginservice/src/main/java/com/ibm/delery/loginservice/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginservice/src/main/java/com/ibm/delery/loginservice/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginservice/src/main/java/com/ibm/delery/loginservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginservice/src/main/java/com/ibm/delery/loginservice/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrationservice/src/main/java/com/ibm/delery/registrationservice/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/registrationservice/src/main/java/com/ibm/delery/registrationservice/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/CorsConfig.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,14 +176,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Made changes to K8's">
-      <option name="closed" value="true" />
-      <created>1705452187788</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1705452187788</updated>
     </task>
     <task id="LOCAL-00068" summary="Made changes to K8's">
       <option name="closed" value="true" />
@@ -572,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709052638969</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1709055379297</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1709055379297</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
