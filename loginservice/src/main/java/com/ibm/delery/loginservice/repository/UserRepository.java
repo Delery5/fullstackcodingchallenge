@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://35.232.9.232")
+
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 

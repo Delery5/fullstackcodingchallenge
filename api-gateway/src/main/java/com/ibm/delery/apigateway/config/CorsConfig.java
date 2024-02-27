@@ -12,10 +12,15 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("*"); // Allow requests from any origin
-        corsConfiguration.addAllowedMethod("*"); // Allow all HTTP methods
-        corsConfiguration.addAllowedHeader("*"); // Allow all headers
-        corsConfiguration.setAllowCredentials(true); // Allow credentials (e.g., cookies, authorization headers)
+        corsConfiguration.addAllowedOrigin("http://35.232.9.232"); // Frontend origin
+        corsConfiguration.addAllowedOrigin("http://employee-service"); // Employee service origin
+        corsConfiguration.addAllowedOrigin("http://login-service"); // Login service origin
+        corsConfiguration.addAllowedOrigin("http://registration-service"); // Registration service origin
+
+        corsConfiguration.addAllowedMethod("*");
+        corsConfiguration.addAllowedOrigin("*");
+        corsConfiguration.addAllowedHeader("*");
+        corsConfiguration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfiguration);

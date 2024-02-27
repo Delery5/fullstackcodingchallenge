@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/auth")
 @Validated
-@CrossOrigin(origins = "http://35.232.9.232")
+@CrossOrigin(origins = "*")
 public class AuthController {
 
    private AuthService authService;

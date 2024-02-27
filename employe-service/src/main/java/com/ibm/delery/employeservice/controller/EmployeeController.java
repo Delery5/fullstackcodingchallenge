@@ -18,6 +18,7 @@ import java.util.Optional;
 //@CrossOrigin(origins = "http://localhost:4200")  // Used for testing
 @RestController
 @RequestMapping("/api/employee")
+@CrossOrigin(origins = "*")
 public class EmployeeController {
 
     @Autowired

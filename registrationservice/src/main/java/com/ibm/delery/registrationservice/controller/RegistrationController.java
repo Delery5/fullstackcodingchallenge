@@ -17,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/api/registration")
 @Validated
+@CrossOrigin(origins = "*")
 public class RegistrationController {
 
     private final ProducerServiceImpl producerService;
