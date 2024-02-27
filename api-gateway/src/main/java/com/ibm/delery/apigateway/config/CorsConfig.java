@@ -6,7 +6,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
 import java.util.Arrays;
 
 @Configuration
@@ -16,8 +15,10 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowedOrigins(Arrays.asList(
-                "http://35.232.9.232",
-                "*" // Allow requests from any other origin
+                "http://35.232.9.232", // Kubernetes load balancer URL
+                "http://loginservice", // Reference to login service by name
+                "http://employe-service", // Reference to employee service by name
+                "http://registration-service" // Reference to registration service by name
         ));
         corsConfiguration.setAllowedMethods(Arrays.asList(
                 HttpMethod.GET.name(),
