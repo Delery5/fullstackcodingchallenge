@@ -2,11 +2,9 @@ package com.ibm.delery.apigateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-import java.util.Arrays;
 
 @Configuration
 public class CorsConfig {
@@ -14,26 +12,14 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(Arrays.asList(
-                "http://35.232.9.232", // Kubernetes load balancer URL
-                "http://loginservice", // Reference to login service by name
-                "http://employe-service", // Reference to employee service by name
-                "http://registration-service" // Reference to registration service by name
-        ));
-        corsConfiguration.setAllowedMethods(Arrays.asList(
-                HttpMethod.GET.name(),
-                HttpMethod.POST.name(),
-                HttpMethod.PUT.name(),
-                HttpMethod.DELETE.name(),
-                HttpMethod.OPTIONS.name()
-        ));
-        corsConfiguration.setAllowedHeaders(Arrays.asList(
-                "Authorization",
-                "Cache-Control",
-                "Content-Type"
-        ));
+        corsConfiguration.addAllowedOrigin("http://35.232.9.232"); // Frontend origin
+        corsConfiguration.addAllowedOrigin("http://employee-service"); // Employee service origin
+        corsConfiguration.addAllowedOrigin("http://login-service"); // Login service origin
+        corsConfiguration.addAllowedOrigin("http://registration-service"); // Registration service origin
+
+        corsConfiguration.addAllowedMethod("*");
+        corsConfiguration.addAllowedHeader("*");
         corsConfiguration.setAllowCredentials(true);
-        corsConfiguration.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfiguration);
