@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ibm/delery/apigateway/config/CorsConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,38 +42,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.DiscoveryServiceApplication.executor": "Run",
-    "Application.EmployeServiceApplication.executor": "Run",
-    "Application.LoginserviceApplication.executor": "Run",
-    "Application.RegistrationserviceApplication.executor": "Run",
-    "Docker.discovery-service.angular-ui: Compose Deployment.executor": "Run",
-    "Docker.discovery-service: Compose Deployment.executor": "Run",
-    "Maven.api-gateway [clean].executor": "Run",
-    "Maven.api-gateway [install].executor": "Run",
-    "Maven.api-gateway [test].executor": "Run",
-    "Maven.discovery-service [clean].executor": "Run",
-    "Maven.discovery-service [install].executor": "Run",
-    "Maven.employe-service [clean].executor": "Run",
-    "Maven.employe-service [install].executor": "Run",
-    "Maven.loginservice [clean].executor": "Run",
-    "Maven.loginservice [install].executor": "Run",
-    "Maven.registrationservice [clean].executor": "Run",
-    "Maven.registrationservice [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/8J0976897/Documents/fullstackcodingchallenge/Minikube-K8",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EmployeServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoginserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RegistrationserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.discovery-service.angular-ui: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.discovery-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.employe-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.employe-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.loginservice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.loginservice [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.registrationservice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.registrationservice [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/8J0976897/Documents/fullstackcodingchallenge/Minikube-K8&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\8J0976897\Documents\fullstackcodingchallenge\Minikube-K8" />
@@ -176,14 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Made changes to K8's">
-      <option name="closed" value="true" />
-      <created>1705448598557</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1705448598558</updated>
     </task>
     <task id="LOCAL-00061" summary="Made changes to K8's">
       <option name="closed" value="true" />
@@ -569,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708627052870</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1708637704176</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1708637704176</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
