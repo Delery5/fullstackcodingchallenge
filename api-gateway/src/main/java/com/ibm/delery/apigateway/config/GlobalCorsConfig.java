@@ -11,10 +11,9 @@ public class GlobalCorsConfig implements WebMvcConfigurer, GlobalCorsConfigs {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("*")
-                .allowedMethods("*")
-                .allowedHeaders("*")
-                .exposedHeaders("Authorization")
+                .allowedOrigins("http://35.232.9.232")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("Content-Type", "Authorization")
                 .allowCredentials(true)
                 .maxAge(3600);
     }
