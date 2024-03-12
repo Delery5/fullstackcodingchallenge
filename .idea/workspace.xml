@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4d4c01ce-61db-4a15-96d6-dddb89d54173" name="Changes" comment="Made changes to K8's" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,14 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700070491809</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Made changes to K8's">
-      <option name="closed" value="true" />
-      <created>1705454687015</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1705454687015</updated>
     </task>
     <task id="LOCAL-00075" summary="Made changes to K8's">
       <option name="closed" value="true" />
@@ -570,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709140258698</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Made changes to K8's">
+      <option name="closed" value="true" />
+      <created>1710257440153</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1710257440153</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
